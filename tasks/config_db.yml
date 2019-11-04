@@ -18,7 +18,7 @@
   wait_for:
     port: "{{ influxdb_http['bind_port'] }}"
 
-- name: config_db | Creating InfluxDB(s)
+- name: config_db | Creating InfluxDB databases
   influxdb_database:
     hostname: "{{ item['host'] }}"
     database_name: "{{ item['name'] }}"
